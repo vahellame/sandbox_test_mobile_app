@@ -34,10 +34,11 @@ class CurrenciesController extends Controller {
           await localCurrenciesRepository.upsertCurrency(currency);
         }
 
-        await Future.delayed(const Duration(seconds: 5));
       } catch (e, s) {
         log('', name: 'ERROR', error: e, stackTrace: s);
       }
+
+      await Future.delayed(const Duration(seconds: 5));
     }
   }
 }
