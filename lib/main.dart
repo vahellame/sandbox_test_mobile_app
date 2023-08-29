@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:provider/provider.dart';
 
 import 'core/navigation/navigation.dart';
 import 'features/domain/controllers/currency/currencies_controller.dart';
 import 'features/domain/use_cases/app_start_use_case.dart';
-import 'package:provider/provider.dart';
 
 Future<void> main() async {
   await AppStartUseCase.execute();

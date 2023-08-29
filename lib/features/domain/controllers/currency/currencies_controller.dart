@@ -23,7 +23,7 @@ class CurrenciesController extends Controller {
     loadingStarted();
     currenciesState.currencies = await localCurrenciesRepository.getAllCurrencies();
     loadingFinished();
-    // unawaited(_loadCurrencies());
+    unawaited(_startFetchingCurrencies());
   }
   
   Future<void> _startFetchingCurrencies() async {

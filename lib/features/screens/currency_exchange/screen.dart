@@ -41,7 +41,7 @@ class _CurrencyExchangeScreenState extends State<CurrencyExchangeScreen>
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Spacer(flex: 1),
+              const Spacer(),
               const Text('You send'),
               const SizedBox(height: 4),
               Row(
@@ -75,7 +75,6 @@ class _CurrencyExchangeScreenState extends State<CurrencyExchangeScreen>
                 ],
               ),
               Align(
-                alignment: Alignment.center,
                 child: IconButton(
                   onPressed: _swapValues,
                   icon: const Icon(Icons.swap_vert),
