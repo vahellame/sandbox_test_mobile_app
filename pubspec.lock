@@ -170,7 +170,7 @@ packages:
     source: hosted
     version: "2.3.2"
   decimal:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: decimal
       sha256: "24a261d5d5c87e86c7651c417a5dbdf8bcd7080dd592533910e8d0505a279f21"
@@ -201,14 +201,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.0"
-  fixed:
-    dependency: "direct main"
-    description:
-      name: fixed
-      sha256: "2f45316422263a7b27506fca71972f7167b03857fc2105d94df5e01cafbd76ce"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.0.1"
   fixnum:
     dependency: transitive
     description:
@@ -312,14 +304,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
-  intl:
-    dependency: transitive
-    description:
-      name: intl
-      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.18.1"
   io:
     dependency: transitive
     description:

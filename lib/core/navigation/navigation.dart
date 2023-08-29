@@ -1,8 +1,9 @@
 import 'package:go_router/go_router.dart';
 
-import '../../features/screens/currency_exchange_screen/currency_exchange_screen.dart';
+import '../../features/screens/currency_exchange/screen.dart';
 
-class AppRouter {
+
+class Navigation {
   static String get currencyExchange => '/currency_exchange';
 
   static final _router = GoRouter(

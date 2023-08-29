@@ -201,6 +201,8 @@ linter: # All rules https://dart.dev/tools/linter-rules/all
     use_test_throws_matchers: true
     use_to_and_as_if_applicable: true
     void_checks: true
+    discarded_futures: true
+    unawaited_futures: true
 
     prefer_double_quotes: false # We use single quotes for all
     always_use_package_imports: false # We use relative imports for all
@@ -223,8 +225,6 @@ linter: # All rules https://dart.dev/tools/linter-rules/all
     sort_pub_dependencies: false # We sort it manually
     prefer_asserts_with_message: false # We are too lazy to write docs
     one_member_abstracts: false # This is not bad
-    discarded_futures: false # Our code is too beautiful to use it
-    unawaited_futures: false # Our code is too beautiful to use it
     avoid_setters_without_getters: false # Why not?
     prefer_foreach: false # Too useless
     prefer_if_elements_to_conditional_expressions: false # I like conditional-expressions
