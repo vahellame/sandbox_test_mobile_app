@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 
-import '../features/domain/controllers/currency/currencies_controller.dart';
+import '../../features/domain/controllers/currency/currencies_controller.dart';
 
 class ControllersInjections {
   const ControllersInjections._();

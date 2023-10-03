@@ -2,7 +2,6 @@ import 'package:go_router/go_router.dart';
 
 import '../../features/screens/currency_exchange/screen.dart';
 
-
 class Navigation {
   static String get currencyExchange => '/currency_exchange';
 

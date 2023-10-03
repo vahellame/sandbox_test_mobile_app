@@ -11,6 +11,5 @@ class CurrencyModel with _$CurrencyModel {
     required Decimal rate,
   }) = _CurrencyModel;
 
-  factory CurrencyModel.fromJson(Map<String, dynamic> json) =>
-      _$CurrencyModelFromJson(json);
+  factory CurrencyModel.fromJson(Map<String, dynamic> json) => _$CurrencyModelFromJson(json);
 }

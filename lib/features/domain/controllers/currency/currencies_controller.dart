@@ -8,8 +8,11 @@ import '../controller.dart';
 import 'currencies_state.dart';
 
 class CurrenciesController extends Controller {
-  CurrenciesController(
-      {required this.currenciesState, required this.localCurrenciesRepository, required this.remoteCurrenciesRepository,});
+  CurrenciesController({
+    required this.currenciesState,
+    required this.localCurrenciesRepository,
+    required this.remoteCurrenciesRepository,
+  });
 
   final LocalCurrenciesRepository localCurrenciesRepository;
   final RemoteCurrenciesRepository remoteCurrenciesRepository;
@@ -33,7 +36,6 @@ class CurrenciesController extends Controller {
         for (final currency in currenciesState.currencies) {
           await localCurrenciesRepository.upsertCurrency(currency);
         }
-
       } catch (e, s) {
         log('', name: 'ERROR', error: e, stackTrace: s);
       }
