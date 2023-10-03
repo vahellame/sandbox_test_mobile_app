@@ -6,8 +6,8 @@ import '../../features/data/repositories/remote_currencies_repository_impl.dart'
 import '../../features/domain/repositories/currencies_repository/local_currencies_repository.dart';
 import '../../features/domain/repositories/currencies_repository/remote_currencies_repository.dart';
 
-class PersistentInjections {
-  const PersistentInjections._();
+class PersistentInjection {
+  const PersistentInjection._();
 
   static void inject() {
     final sl = GetIt.instance;
