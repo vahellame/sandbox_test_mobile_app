@@ -217,31 +217,32 @@ linter: #
     # Disabled rules
     prefer_double_quotes: false # We use single quotes for all
     always_use_package_imports: false # We use relative imports for all
-    public_member_api_docs: false # We are too lazy to write docs
+    public_member_api_docs: false # We prefer not to write docs
     lines_longer_than_80_chars: false # We use 100 characters per line
-    always_specify_types: false # const and final don't need this
-    unnecessary_final: false # final better than var
-    cascade_invocations: false # Code starting look too weird
-    prefer_final_parameters: false # We are too lazy to mark all parameters as final
+    always_specify_types: false # const and final make this unnecessary
+    unnecessary_final: false # final is preferred over var
+    cascade_invocations: false # Code starts to look too weird
+    prefer_final_parameters: false # Not inclined to mark all parameters as final
     avoid_classes_with_only_static_members: false # We use classes to group constants
-    prefer_expression_function_bodies: false # Sometimes it looks too bad
-    avoid_catches_without_on_clauses: false # Too useless
-    omit_local_variable_types: false # It creates var. And creates it everywhere
-    diagnostic_describe_all_properties: false # We are too lazy to do it
-    missing_whitespace_between_adjacent_strings: false # Sometimes it useless
-    always_put_control_body_on_new_line: false # Sometimes it useless
-    require_trailing_commas: false # We use this rule from DCM
-    avoid_positional_boolean_parameters: false # We are too lazy for this
-    no_runtimeType_toString: false # We need it
-    sort_pub_dependencies: false # We sort it manually
-    prefer_asserts_with_message: false # We are too lazy to write docs
-    one_member_abstracts: false # This is not bad
-    avoid_setters_without_getters: false # Why not?
-    prefer_foreach: false # Too useless
-    prefer_if_elements_to_conditional_expressions: false # I like conditional-expressions
-    parameter_assignments: false # Sometimes it's not bad
-    use_if_null_to_convert_nulls_to_bools: false # Sometimes it's not bad
-    avoid_function_literals_in_foreach_calls: false # Why not?
+    prefer_expression_function_bodies: false # Sometimes it compromises readability
+    avoid_catches_without_on_clauses: false # Not needed in our case
+    omit_local_variable_types: false # It generates var, and does so indiscriminately
+    diagnostic_describe_all_properties: false # Prefer not to do this
+    missing_whitespace_between_adjacent_strings: false # Sometimes not needed
+    always_put_control_body_on_new_line: false # Sometimes not needed
+    require_trailing_commas: false # We follow this rule from DCM
+    avoid_positional_boolean_parameters: false # Not inclined to make the change
+    no_runtimeType_toString: false # We find it necessary
+    sort_pub_dependencies: false # We sort dependencies manually
+    prefer_asserts_with_message: false # Prefer not to write additional docs
+    one_member_abstracts: false # See no issue with this
+    avoid_setters_without_getters: false # Find this acceptable
+    prefer_foreach: false # Not needed in our case
+    prefer_if_elements_to_conditional_expressions: false # We like conditional expressions
+    parameter_assignments: false # Sometimes it's acceptable
+    use_if_null_to_convert_nulls_to_bools: false # Sometimes it's acceptable
+    avoid_function_literals_in_foreach_calls: false # See no issue with this
+
 
 dart_code_metrics:
   formatter:
@@ -443,48 +444,43 @@ dart_code_metrics:
 
     # Disabled rules
     ban-name: false # Deprecated
-    avoid-async-call-in-sync-function: # Our code is too beautiful to use it
-    no-equal-arguments: false # Too useless
+    avoid-async-call-in-sync-function: # Our code is too beautiful to use this
+    no-equal-arguments: false # Not applicable for us
     avoid-returning-widgets: false # We are too lazy to create classes
-    prefer-moving-to-variable: false # We are too lazy to move to variable and sometimes it's too useless
-    avoid-border-all: false # Too useless
-    prefer-const-border-radius: false # Too useless
-    prefer-extracting-callbacks: false # We are too lazy to extract callbacks
+    prefer-moving-to-variable: false # We are too lazy to move variables and sometimes it's not applicable for us
+    avoid-border-all: false # Not applicable for us
+    prefer-const-border-radius: false # Not applicable for us
+    prefer-extracting-callbacks: false # Not applicable for us
     avoid-late-keyword: false # Using late is good for us
-    prefer-match-file-name: false # We are too lazy to extract all in separate file
-    prefer-correct-identifier-length: false # Too useless
+    prefer-match-file-name: false # We are too lazy to extract all into separate files
+    prefer-correct-identifier-length: false # Not applicable for us
     prefer-async-await: false # We need [then]
-    avoid-ignoring-return-values: false # Too useless
-    no-magic-number: false # Too useless
-    avoid-non-null-assertion: false # Too useless
-    avoid-passing-async-when-sync-expected: false # Too useless
-    avoid-wrapping-in-padding: false # We are too lazy to check it
-    no-empty-block: false # Too useless
-    format-comment: false # Too useless
-    prefer-static-class: false  # We are too lazy to put all in classes
-    avoid-non-ascii-symbols: false # We are too lazy to extract all non ascii symbols
-    avoid-long-functions: false # Too useless
-    avoid-negated-conditions: false  # Too useless
-    avoid-shadowing: false # Too useless
-    map-keys-ordering: false # Too useless
-    avoid-similar-names: false # We need this functional
-    avoid-unsafe-collection-methods: false # We need this functional
-    prefer-correct-error-name: false # Too useless
-    enum-constants-ordering: false # We need this functional
-    avoid-nullable-interpolation: false # If it null, i want see it
-    prefer-correct-switch-length: false # Too useless
-    avoid-long-parameter-list: false # Too useless
-    prefer-named-boolean-parameters: # We need this functional
-    avoid-mutating-parameters: false # We need this functional
+    avoid-ignoring-return-values: false # Not applicable for us
+    no-magic-number: false # Not applicable for us
+    avoid-non-null-assertion: false # Not applicable for us
+    avoid-passing-async-when-sync-expected: false # Not applicable for us
+    avoid-wrapping-in-padding: false # We are too lazy to check this
+    no-empty-block: false # Not applicable for us
+    format-comment: false # Not applicable for us
+    prefer-static-class: false  # We are too lazy to put everything in classes
+    avoid-non-ascii-symbols: false # We are too lazy to extract all non-ascii symbols
+    avoid-long-functions: false # Not applicable for us
+    avoid-negated-conditions: false  # Not applicable for us
+    avoid-shadowing: false # Not applicable for us
+    map-keys-ordering: false # Not applicable for us
+    avoid-similar-names: false # We need this functionality
+    avoid-unsafe-collection-methods: false # We need this functionality
+    prefer-correct-error-name: false # Not applicable for us
+    enum-constants-ordering: false # We need this functionality
+    avoid-nullable-interpolation: false # If it's null, I want to see it
+    prefer-correct-switch-length: false # Not applicable for us
+    avoid-long-parameter-list: false # Not applicable for us
+    prefer-named-boolean-parameters: # We need this functionality
+    avoid-mutating-parameters: false # We need this functionality
     avoid-empty-setstate: false # We need this
     prefer-text-rich: false # We are too lazy to use it
-    prefer-dedicated-media-query-methods: false # We need it
+    prefer-dedicated-media-query-methods: false # We need this
     avoid-missing-image-alt: false # We don't need it
     avoid-nested-conditional-expressions: false # We need this
-    unnecessary-trailing-comma: false # We need custom commas
-    move-variable-closer-to-its-usage: false # We need custom position
-    avoid-passing-self-as-argument: false # We need it
-    prefer-getter-over-method: false # Sometimes getter more logic
-    avoid-missing-interpolation: false # We need it
-    parameters-ordering: false # We need custom ordering
-    avoid-recursive-calls: false # We need it
+    unnecessary-trailing-comma: false # We need to specify this manually
+
