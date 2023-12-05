@@ -16,6 +16,7 @@ class PersistentInjection {
 
     sl.registerLazySingleton<LocalCurrenciesRepository>(LocalCurrenciesRepositoryImpl.new);
     sl.registerLazySingleton<RemoteCurrenciesRepository>(
-        () => RemoteCurrenciesRepositoryImpl(sl.get()));
+      () => RemoteCurrenciesRepositoryImpl(sl.get()),
+    );
   }
 }

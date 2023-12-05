@@ -5,12 +5,12 @@ analyzer:
     - "**/generated/**"
     - "lib/firebase_options.dart"
     - "test/**"
-#  language:
-#    strict-casts: true
-#    strict-inference: true
-#    strict-raw-types: true
-#  strong-mode:
-#    implicit-casts: false
+  language:
+    strict-casts: false
+    strict-inference: false
+    strict-raw-types: true
+  strong-mode:
+    implicit-casts: false
 
 linter: #
   # All rules https://dart.dev/tools/linter-rules/all
@@ -250,6 +250,18 @@ dart_code_metrics:
     line-length: 100
     cascading-widget-extensions: true
 
+  # Pubspec rules
+  # All rules https://github.com/CQLabs/dart-code-metrics-presets/blob/main/lib/pub.yaml
+  pubspec-rules:
+    prefer-publish-to-none: true
+    prefer-correct-package-name: false # We don't have one
+    prefer-semver-version: true
+    avoid-dependency-overrides: true
+    prefer-caret-version-syntax: true
+    avoid-any-version: true
+    prefer-correct-screenshots: true
+    banned-dependencies: false # We don't have one
+
   rules: #
     # Dart rules
     # All rules https://github.com/CQLabs/dart-code-metrics-presets/blob/main/lib/dart_all.yaml
@@ -405,6 +417,17 @@ dart_code_metrics:
     avoid-unnecessary-overrides-in-state: true
     avoid-recursive-widget-calls: true
 
+    # Provider rules
+    # All rules https://github.com/CQLabs/dart-code-metrics-presets/blob/main/lib/provider.yaml
+    avoid-instantiating-in-value-provider: true
+    avoid-read-inside-build: true
+    avoid-watch-outside-build: true
+    dispose-providers: true
+    prefer-multi-provider: true
+
+    # GetIt rules
+    # All rules https://github.com/CQLabs/dart-code-metrics-presets/blob/main/lib/get_it.yaml
+    avoid-functions-in-register-singleton: true
 
     # Custom setups
     member-ordering:
@@ -427,10 +450,8 @@ dart_code_metrics:
         - methods
         - dispose-method
 
-    # Will enable when we will be ready
-    arguments-ordering: false
-    #    arguments-ordering:
-    #      child-last: true
+    arguments-ordering:
+      child-last: true
 
     prefer-single-widget-per-file:
       ignore-private-widgets: true
