@@ -37,8 +37,7 @@ class _CurrencyExchangeState extends State<CurrencyExchange> {
       await context.read<CurrenciesController>().init();
     });
   }
-
-  // This widget is the root of your application.
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
